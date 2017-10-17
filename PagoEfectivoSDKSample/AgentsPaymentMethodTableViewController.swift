@@ -15,6 +15,7 @@ class AgentsPaymentMethodTableViewController: UITableViewController {
     @IBOutlet weak var amountCip: UILabel!
     @IBOutlet weak var dateExpiryCip: UILabel!
     var dataCip = DataCip()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         numberCip.text = String(dataCip.numberCip)
@@ -45,10 +46,10 @@ class AgentsPaymentMethodTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == Global.Segue.showSummary) {
             guard let nextView = segue.destination as? SummaryViewController else {
+                print("No se pudo cargar \(Global.Segue.showSummary)")
                 return
             }
             nextView.dataCip = dataCip
         }
     }
-
 }

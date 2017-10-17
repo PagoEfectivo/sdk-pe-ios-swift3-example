@@ -13,22 +13,11 @@ import PagoEfectivoSDK
 class SearchCipViewController: UIViewController {
 
     @IBOutlet weak var positonYBtnSearch: NSLayoutConstraint!
-    @IBOutlet weak var lblCip1: UILabel!
-    @IBOutlet weak var txtLblCip1: UITextField!
-    @IBOutlet weak var lblCip2: UILabel!
-    @IBOutlet weak var txtLblCip2: UITextField!
-    @IBOutlet weak var lblCip3: UILabel!
-    @IBOutlet weak var txtLblCip3: UITextField!
-    @IBOutlet weak var lblCip4: UILabel!
-    @IBOutlet weak var txtLblCip4: UITextField!
-    @IBOutlet weak var lblCip5: UILabel!
-    @IBOutlet weak var txtLblCip5: UITextField!
-    var contCips = 0
     @IBOutlet weak var btnSearch: UIButton!
     var arrayCips = [String]()
     var arraytxtLbl = [UITextField]()
     var resulSearchCip : [ResultSearchCip] = []
-
+    var contCips = 0
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -98,7 +87,7 @@ class SearchCipViewController: UIViewController {
                     }
                 }
                 DispatchQueue.main.async{
-                self.performSegue(withIdentifier: Global.Segue.showResultSearch, sender: self)
+                    self.performSegue(withIdentifier: Global.Segue.showResultSearch, sender: self)
                 }
             }
         })

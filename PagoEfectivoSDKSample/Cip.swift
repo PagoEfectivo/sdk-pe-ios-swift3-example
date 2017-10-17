@@ -9,7 +9,6 @@
 import Foundation
 
 struct DataCip {
-    
     var amountCip:Double!
     var numberCip:Int!
     var currencyCip:String!

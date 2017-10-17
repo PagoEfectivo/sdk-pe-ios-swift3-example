@@ -80,9 +80,9 @@ class DataCipViewController: UIViewController {
         if (adminEmail.text != ""){
             request.adminEmail = adminEmail.text
         }
-        if (dateExpiry.text != ""){
+        /*if (dateExpiry.text != ""){
             request.dateExpiry = dateExpiry.text
-        }
+        }*/
         PagoEfectivoSDK.cip().generate(request, responseHandler: { (status, result, error) in
             if (error != nil) {
                 var arrayErrorsForUser = [String]()
