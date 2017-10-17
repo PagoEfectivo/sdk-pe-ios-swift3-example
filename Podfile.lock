@@ -1,0 +1,22 @@
+PODS:
+  - CocoaAsyncSocket (7.6.1)
+  - IQKeyboardManagerSwift (4.0.10)
+  - PagoEfectivoSDK (0.1.0)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket
+  - IQKeyboardManagerSwift (= 4.0.10)
+  - PagoEfectivoSDK (from `~/Desktop/EjemplosPagoEfectivo/PagoEfectivoSDK`)
+
+EXTERNAL SOURCES:
+  PagoEfectivoSDK:
+    :path: ~/Desktop/EjemplosPagoEfectivo/PagoEfectivoSDK
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
+  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  PagoEfectivoSDK: c06dec3a76d32ff65b5cfc87a55c4994631a5381
+
+PODFILE CHECKSUM: 1d453230974e53f6829c7b0eb7f68bb9a1fffe02
+
+COCOAPODS: 1.4.0.beta.1
