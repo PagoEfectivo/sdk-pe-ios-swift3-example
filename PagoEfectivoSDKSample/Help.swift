@@ -7,31 +7,33 @@
 //
 
 import Foundation
-
+import PagoEfectivoSDK
 
 struct Help {
     
     static func StringToCurrency (value : UITextField) -> currency {
         switch value.text! {
         case "PEN":
-            return PEN
+            return .PEN
+        case "USD":
+            return .USD
         default:
-            return USD
+            return .NONE
         }
     }
     
     static func StringToDocumenType (value : UITextField) -> documentType {
         switch value.text! {
         case "DNI":
-            return DNI
+            return .DNI
         case "PASS":
-            return  PASS
+            return  .PASS
         case "LMI":
-            return LMI
-        case "NANE":
-            return NANE
+            return .LMI
+        case "PAR":
+            return .PAR
         default:
-            return PAR
+            return .NANE
         }
     }
     
@@ -73,17 +75,23 @@ struct Help {
     static func customAlert (arrayErrorsForUser: [String], time: Double) -> UIAlertController {
         let alert = UIAlertController(title: "Error!", message: "", preferredStyle: .alert)
         let newView = UIView()
-        let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(75*arrayErrorsForUser.count))
+        let constant:CGFloat!
+        if (arrayErrorsForUser.count == 1) {
+            constant = CGFloat(80)
+        } else {
+            constant = CGFloat((75 - 5*(arrayErrorsForUser.count-1))*arrayErrorsForUser.count)
+        }
+        let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: constant)
         alert.view.addConstraint(height)
-        for index in 0...arrayErrorsForUser.count - 1{
-            newView.addSubview(Help.addLbl(numberItems: index, text:arrayErrorsForUser[index], positionY: 50, positionx: 8, width: 200, height: 60))
+        for (index,item) in arrayErrorsForUser.enumerated(){
+            newView.addSubview(Help.addLbl(numberItems: index , text:item, positionY: 30, positionx: 8, width: 200, height: 60))
         }
         alert.view.addSubview(newView)
         let when = DispatchTime.now() + time
-        DispatchQueue.main.asyncAfter(deadline: when){
+        DispatchQueue.main.asyncAfter(deadline: when) { 
             alert.dismiss(animated: true, completion: nil)
+            alert.view.removeFromSuperview()
         }
-        alert.view.removeFromSuperview()
         return alert
     }
     
@@ -97,6 +105,24 @@ struct Help {
         let min = stringDate.substring(with: 14..<16)
         let sec = stringDate.substring(with: 17..<19)
         return "\(day)/\(month)/\(year) \(hour):\(min):\(sec)"
+    }
+    
+    static func stringToTypeDate ( string: String) -> Date {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/mm/yyyy hh:mm" //Your date format
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        return dateFormatter.date(from: string)!
+    }
+    
+    static func createRefresher ( view: UIView) -> UIActivityIndicatorView {
+    
+        let refresh : UIActivityIndicatorView = UIActivityIndicatorView()
+        refresh.center = view.center
+        refresh.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        refresh.hidesWhenStopped = true
+        view.addSubview(refresh)
+        return refresh
     }
 }
 

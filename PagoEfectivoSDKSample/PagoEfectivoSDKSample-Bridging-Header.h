@@ -3,4 +3,4 @@
 //
 
 #import <PagoEfectivoSDK/PagoEfectivoSDK.h>
-
+#import <PagoEfectivoSDK/Cip.h>

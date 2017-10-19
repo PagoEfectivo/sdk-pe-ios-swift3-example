@@ -56,16 +56,22 @@ class SearchCipViewController: UIViewController {
     }
 
     @IBAction func searchCips(_ sender: UIButton) {
+        let refresh = Help.createRefresher(view: self.view)
+        refresh.startAnimating()
         btnSearch.isEnabled = false
         for index in 0...contCips - 1 {
             let cip = arraytxtLbl[index].text
             arrayCips.append(cip!)
         }
+
         PagoEfectivoSDK.cip().search(arrayCips, responseHandler: { (status, resul, error) in
         if (error != nil) {
-            self.present(Help.simpleAlert(message: "Error en \(error!.localizedDescription)", time: 3), animated: true, completion: nil)
-            self.btnSearch.isEnabled = true
-            self.arrayCips.removeAll()
+            DispatchQueue.main.async{
+                self.present(Help.simpleAlert(message: "Error en \(error!.localizedDescription)", time: 2), animated: true, completion: nil)
+                self.btnSearch.isEnabled = true
+                self.arrayCips.removeAll()
+                refresh.stopAnimating()
+            }
             } else {
                 if let dictionary = resul as? [String: Any] {
                     if let data = dictionary["data"] as? NSArray {
@@ -88,6 +94,7 @@ class SearchCipViewController: UIViewController {
                 }
                 DispatchQueue.main.async{
                     self.performSegue(withIdentifier: Global.Segue.showResultSearch, sender: self)
+                    refresh.stopAnimating()
                 }
             }
         })
