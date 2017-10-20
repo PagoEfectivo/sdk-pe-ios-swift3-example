@@ -8,6 +8,7 @@
 
 import UIKit
 import PagoEfectivoSDK
+import IQKeyboardManagerSwift
 class DataCipViewController: UIViewController {
 
     let request = CipRequest()
@@ -33,27 +34,48 @@ class DataCipViewController: UIViewController {
     let currencyOptions = ["PEN","USD"]
     let documentTypeOptions = ["DNI","PASS","LMI","PAR","NAN"]
     var dataCip = DataCip()
+    let datePicker = UIDatePicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPicker(value: currencyPicker)
         setupPicker(value: documentTypePicker)
+        setupDataPicker(value: datePicker)
     }
 
     func setupPicker (value : UIPickerView){
         value.delegate = self
         value.dataSource = self
     }
+    
+    func setupDataPicker ( value: UIDatePicker) {
+        value.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 200)
+        value.timeZone = NSTimeZone.local
+        value.backgroundColor = UIColor.white
+        value.layer.cornerRadius = 5.0
+        value.layer.shadowOpacity = 0.5
+        value.addTarget(self, action: #selector(changeDate), for: .valueChanged)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         generateCip.isEnabled = true
         currency.inputView = currencyPicker
         userDocumentType.inputView = documentTypePicker
+        dateExpiry.inputView = datePicker
+    }
+    
+    func changeDate () {
+    
+        let myDateFormatter: DateFormatter = DateFormatter()
+        myDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
+        dateExpiry.text = myDateFormatter.string(from: datePicker.date)
+        request.dateExpiry = datePicker.date
     }
 
     @IBAction func nextView(_ sender: UIButton) {
         generateCip.isEnabled = false
-
+        let refresh = Help.createRefresher(view: self.view)
+        refresh.startAnimating()
         request.userName = userName.text
         request.userLastName = userLastName.text
         request.userUbigeo = userUbigeo.text
@@ -66,37 +88,31 @@ class DataCipViewController: UIViewController {
         request.additionalData = additionalData.text
         request.paymentConcept = paymentConcep.text
         request.userCodeCountry = userCodeCountry.text
-        if (currency.text != ""){
-            request.currency = Help.StringToCurrency(value: currency)
-        }
-        if (userDocumentType.text != ""){
-            request.userDocumentType = Help.StringToDocumenType(value: userDocumentType)
-        }
-        if (amount.text != "") {
+        request.currency = Help.StringToCurrency(value: currency)
+        request.userDocumentType = Help.StringToDocumenType(value: userDocumentType)
+        request.adminEmail = adminEmail.text
+        if (!amount.text?.isEmpty) {
             request.amount = Double(amount.text!)!
         } else {
             request.amount = 0
         }
-        if (adminEmail.text != ""){
-            request.adminEmail = adminEmail.text
-        }
-        /*if (dateExpiry.text != ""){
-            request.dateExpiry = dateExpiry.text
-        }*/
+        var arrayErrorsForUser = [String]()
         PagoEfectivoSDK.cip().generate(request, responseHandler: { (status, result, error) in
             if (error != nil) {
-                var arrayErrorsForUser = [String]()
                 if let errors = (error as NSError?)?.userInfo{
                     if let arrayErrors = errors["errorsFounded"]! as? NSArray {
                         for index in 0...arrayErrors.count - 1 {
                             let object = arrayErrors[index] as? [String:Any]
-                            let messageForUser = "\(index+1).\(object?["fieldName"] as! String ) is \(object?["error"] as! String)"
+                            let messageForUser = "\(index+1). Campo \(object?["message"] as! String)"
                             arrayErrorsForUser.append(messageForUser)
                         }
                     }
                 }
-                self.present(Help.customAlert(arrayErrorsForUser: arrayErrorsForUser, time: 2), animated: true, completion: nil)
-                self.generateCip.isEnabled = true
+                DispatchQueue.main.async{
+                    self.present(Help.customAlert(arrayErrorsForUser: arrayErrorsForUser, time: 2), animated: true, completion: nil)
+                    self.generateCip.isEnabled = true
+                    refresh.stopAnimating()
+                }
             } else {
                 if let dictionary = result as? [String: Any] {
                     if let data = dictionary["data"] as? [String: Any] {
@@ -111,6 +127,7 @@ class DataCipViewController: UIViewController {
                 }
                 DispatchQueue.main.async{
                     self.performSegue(withIdentifier: Global.Segue.showPasarela, sender: self)
+                    refresh.stopAnimating()
                 }
             }
         })
