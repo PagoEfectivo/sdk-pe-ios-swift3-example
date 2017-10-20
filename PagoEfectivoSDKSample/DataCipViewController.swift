@@ -74,7 +74,6 @@ class DataCipViewController: UIViewController {
 
     @IBAction func nextView(_ sender: UIButton) {
         generateCip.isEnabled = false
-
         let refresh = Help.createRefresher(view: self.view)
         refresh.startAnimating()
         request.userName = userName.text
@@ -92,7 +91,7 @@ class DataCipViewController: UIViewController {
         request.currency = Help.StringToCurrency(value: currency)
         request.userDocumentType = Help.StringToDocumenType(value: userDocumentType)
         request.adminEmail = adminEmail.text
-        if (amount.text != "") {
+        if (!amount.text?.isEmpty) {
             request.amount = Double(amount.text!)!
         } else {
             request.amount = 0
