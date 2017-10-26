@@ -13,7 +13,6 @@ class PaymentMethodTableViewController: UITableViewController {
     var dataCip = DataCip()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(dataCip)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,7 +22,7 @@ class PaymentMethodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
@@ -31,12 +30,11 @@ class PaymentMethodTableViewController: UITableViewController {
         case 1:
             performSegue(withIdentifier: Global.Segue.showAgentsOptions, sender: self)
         default:
-            print("Opción no válida")
+            self.present(Help.simpleAlert(message: "Opción no válida", time: 1.5), animated: true, completion: nil)
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if (segue.identifier == Global.Segue.showMobileOptions) {
             guard let nextView = segue.destination as? MobilePaymentMethodTableViewController else {
                 return
@@ -49,5 +47,4 @@ class PaymentMethodTableViewController: UITableViewController {
             nextView.dataCip = dataCip
         }
     }
-
 }

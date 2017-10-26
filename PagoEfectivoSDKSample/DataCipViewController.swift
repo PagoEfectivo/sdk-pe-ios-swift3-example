@@ -11,7 +11,6 @@ import PagoEfectivoSDK
 import IQKeyboardManagerSwift
 class DataCipViewController: UIViewController {
 
-    let request = CipRequest()
     @IBOutlet weak var generateCip: UIButton!
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var currency: UITextField!
@@ -29,6 +28,7 @@ class DataCipViewController: UIViewController {
     @IBOutlet weak var userPhone: UITextField!
     @IBOutlet weak var userCodeCountry: UITextField!
     @IBOutlet weak var adminEmail: UITextField!
+    let request = CipRequest()
     let currencyPicker = UIPickerView()
     let documentTypePicker = UIPickerView()
     let currencyOptions = ["PEN","USD"]
@@ -65,7 +65,6 @@ class DataCipViewController: UIViewController {
     }
     
     func changeDate () {
-    
         let myDateFormatter: DateFormatter = DateFormatter()
         myDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         dateExpiry.text = myDateFormatter.string(from: datePicker.date)
@@ -74,48 +73,37 @@ class DataCipViewController: UIViewController {
 
     @IBAction func nextView(_ sender: UIButton) {
         generateCip.isEnabled = false
-        let refresh = Help.createRefresher(view: self.view)
+        let refresh = Help.createRefresh(view: self.view)
         refresh.startAnimating()
+        request.currency = Help.StringToCurrency(value: currency)
+        request.userName = userName.text
+        request.amount = 0
+        if (!(amount.text?.isEmpty)!) {
+            request.amount = Double(amount.text!)!
+        }
+        request.transactionCode = transactionCode.text
+        request.additionalData = additionalData.text
+        request.paymentConcept = paymentConcep.text
+        request.userEmail = userEmail.text
         request.userName = userName.text
         request.userLastName = userLastName.text
         request.userUbigeo = userUbigeo.text
-        request.userCodeCountry = userCountry.text
+        request.userCountry = userCountry.text
+        request.userDocumentType = Help.StringToDocumenType(value: userDocumentType)
         request.userDocumentNumber = userDocumentNumber.text
         request.userPhone = userPhone.text
-        request.userEmail = userEmail.text
-        request.transactionCode = transactionCode.text
-        request.additionalData = additionalData.text
-        request.additionalData = additionalData.text
-        request.paymentConcept = paymentConcep.text
         request.userCodeCountry = userCodeCountry.text
-        request.currency = Help.StringToCurrency(value: currency)
-        request.userDocumentType = Help.StringToDocumenType(value: userDocumentType)
         request.adminEmail = adminEmail.text
-        if (!amount.text?.isEmpty) {
-            request.amount = Double(amount.text!)!
-        } else {
-            request.amount = 0
-        }
-        var arrayErrorsForUser = [String]()
-        PagoEfectivoSDK.cip().generate(request, responseHandler: { (status, result, error) in
-            if (error != nil) {
-                if let errors = (error as NSError?)?.userInfo{
-                    if let arrayErrors = errors["errorsFounded"]! as? NSArray {
-                        for index in 0...arrayErrors.count - 1 {
-                            let object = arrayErrors[index] as? [String:Any]
-                            let messageForUser = "\(index+1). Campo \(object?["message"] as! String)"
-                            arrayErrorsForUser.append(messageForUser)
-                        }
-                    }
-                }
+        let response:serviceCallback = { (status, result, error) in
+            if(error != nil ){
                 DispatchQueue.main.async{
-                    self.present(Help.customAlert(arrayErrorsForUser: arrayErrorsForUser, time: 2), animated: true, completion: nil)
+                    self.present(Help.customAlert(arrayErrorsForUser: Help.returnErrorFounded(error: error!), time: 2), animated: true, completion: nil)
                     self.generateCip.isEnabled = true
                     refresh.stopAnimating()
                 }
             } else {
-                if let dictionary = result as? [String: Any] {
-                    if let data = dictionary["data"] as? [String: Any] {
+                guard let dictionary = result as? [String: Any] else { return }
+                guard let data = dictionary["data"] as? [String: Any] else { return }
                         for _ in data {
                             self.dataCip.numberCip = data["cip"] as! Int
                             self.dataCip.currencyCip = data["currency"] as! String
@@ -123,14 +111,13 @@ class DataCipViewController: UIViewController {
                             self.dataCip.amountCip = data["amount"] as! Double
                             self.dataCip.dateExpiryCip = data["dateExpiry"] as! String
                         }
-                    }
-                }
                 DispatchQueue.main.async{
                     self.performSegue(withIdentifier: Global.Segue.showPasarela, sender: self)
                     refresh.stopAnimating()
                 }
             }
-        })
+        }
+        PagoEfectivoSDK.cip().generate(request, responseHandler: response)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -155,24 +142,24 @@ extension DataCipViewController : UIPickerViewDelegate {
 }
 
 extension DataCipViewController : UIPickerViewDataSource {
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var numbersRows = documentTypeOptions.count
         if pickerView == currencyPicker {
-            return currencyOptions.count
-        } else {
-            return  documentTypeOptions.count
+            numbersRows = currencyOptions.count
         }
+        return numbersRows
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+        var title = documentTypeOptions[row]
         if pickerView == currencyPicker {
-            return currencyOptions[row]
-        } else {
-            return  documentTypeOptions[row]
+            title = currencyOptions[row]
         }
+        return title
     }
 }

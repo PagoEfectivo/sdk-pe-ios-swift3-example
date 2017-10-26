@@ -17,30 +17,26 @@ class MobilePaymentMethodTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        numberCip.text = String(dataCip.numberCip)
+        numberCip.text = "$ \(String(dataCip.amountCip))"
         if (dataCip.currencyCip == "PEN") {
-            mountCip.text = "S/. " + String(dataCip.amountCip)
-        } else {
-            mountCip.text = "$ " + String(dataCip.amountCip)
+            numberCip.text = "S/.\(String(dataCip.amountCip))"
         }
-        dateExpiryCip.text = Help.stringToDate(date: dataCip.dateExpiryCip)
+        dateExpiryCip.text = Help.getFormatterEvent(dateString: dataCip.dateExpiryCip)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return 6
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == 1) {
+        if (indexPath.row == 1) {
             performSegue(withIdentifier: Global.Segue.showSummary, sender: self)
         } else {
-            print("Opción no váida!")
+            self.present(Help.simpleAlert(message: "Opción no válida", time: 1.5), animated: true, completion: nil)
         }
     }
     

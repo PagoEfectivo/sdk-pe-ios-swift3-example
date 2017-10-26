@@ -10,7 +10,6 @@ import UIKit
 
 class AgentsPaymentMethodTableViewController: UITableViewController {
 
-    
     @IBOutlet weak var numberCip: UILabel!
     @IBOutlet weak var amountCip: UILabel!
     @IBOutlet weak var dateExpiryCip: UILabel!
@@ -24,7 +23,7 @@ class AgentsPaymentMethodTableViewController: UITableViewController {
         } else {
             amountCip.text = "$ " + String(dataCip.amountCip)
         }
-        dateExpiryCip.text = Help.stringToDate(date: dataCip.dateExpiryCip)
+        dateExpiryCip.text = Help.getFormatterEvent(dateString: dataCip.dateExpiryCip)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,17 +35,17 @@ class AgentsPaymentMethodTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == 1) {
+        if (indexPath.row == 1) {
             performSegue(withIdentifier: Global.Segue.showSummary, sender: self)
         } else {
-            print("Opción no váida!")
+            self.present(Help.simpleAlert(message: "Opción no válida", time: 1.5), animated: true, completion: nil)
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == Global.Segue.showSummary) {
             guard let nextView = segue.destination as? SummaryViewController else {
-                print("No se pudo cargar \(Global.Segue.showSummary)")
+                self.present(Help.simpleAlert(message: "\(Global.Segue.showSummary) no disponible", time: 1.5), animated: true, completion: nil)
                 return
             }
             nextView.dataCip = dataCip
