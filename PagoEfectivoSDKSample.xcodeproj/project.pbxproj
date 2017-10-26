@@ -26,8 +26,7 @@
 		56E06BB21F965EF00063380D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BB11F965EF00063380D /* Globals.swift */; };
 		56E1B72D1F916DF400821188 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E1B72C1F916DF400821188 /* CFNetwork.framework */; };
 		56E1B72F1F916DFE00821188 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E1B72E1F916DFE00821188 /* Security.framework */; };
-		896096959842F7E58AE87139 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD32B05B72E61695CD117ED4 /* Pods_PagoEfectivoSDKSample.framework */; };
-		AF519033104457E70D5EF8F4 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC0F0AD8191AE5804A2F561 /* Pods_PagoEfectivoSDKSample.framework */; };
+		9E6BE64AA82AB61030928D82 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8AE19A08111392BC026F05 /* Pods_PagoEfectivoSDKSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,8 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4AC0F0AD8191AE5804A2F561 /* Pods_PagoEfectivoSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PagoEfectivoSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BAC0624674B1974E596858B /* Pods_PagoEfectivoSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PagoEfectivoSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		184BCC05429C9CA98F5C7559 /* Pods-PagoEfectivoSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagoEfectivoSDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		5647FFFC1F8FC205005F6684 /* SearchCipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCipViewController.swift; sourceTree = "<group>"; };
 		56579D491F883BA300FE85D6 /* CipDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CipDetailTableViewCell.swift; sourceTree = "<group>"; };
 		56579D4A1F883BA300FE85D6 /* CipDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CipDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -68,9 +66,8 @@
 		56E06BB11F965EF00063380D /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		56E1B72C1F916DF400821188 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		56E1B72E1F916DFE00821188 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		5908BBFF74637ACD3996DF91 /* Pods-PagoEfectivoSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagoEfectivoSDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample.release.xcconfig"; sourceTree = "<group>"; };
-		605DD1341A1B3251640D4E23 /* Pods-PagoEfectivoSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagoEfectivoSDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
-		CD32B05B72E61695CD117ED4 /* Pods_PagoEfectivoSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PagoEfectivoSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D6BCD294D30A4C0B58E48B /* Pods-PagoEfectivoSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagoEfectivoSDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		CE8AE19A08111392BC026F05 /* Pods_PagoEfectivoSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PagoEfectivoSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +77,7 @@
 			files = (
 				56E1B72F1F916DFE00821188 /* Security.framework in Frameworks */,
 				56E1B72D1F916DF400821188 /* CFNetwork.framework in Frameworks */,
-				AF519033104457E70D5EF8F4 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */,
-				896096959842F7E58AE87139 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */,
+				9E6BE64AA82AB61030928D82 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +89,7 @@
 			children = (
 				56E1B72E1F916DFE00821188 /* Security.framework */,
 				56E1B72C1F916DF400821188 /* CFNetwork.framework */,
-				CD32B05B72E61695CD117ED4 /* Pods_PagoEfectivoSDKSample.framework */,
+				CE8AE19A08111392BC026F05 /* Pods_PagoEfectivoSDKSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,9 +97,8 @@
 		174B35A3BEE2F40883A52B33 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7BF712E568BA24BBC5A13BB2 /* Frameworks */,
-				605DD1341A1B3251640D4E23 /* Pods-PagoEfectivoSDKSample.debug.xcconfig */,
-				5908BBFF74637ACD3996DF91 /* Pods-PagoEfectivoSDKSample.release.xcconfig */,
+				184BCC05429C9CA98F5C7559 /* Pods-PagoEfectivoSDKSample.debug.xcconfig */,
+				94D6BCD294D30A4C0B58E48B /* Pods-PagoEfectivoSDKSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -191,7 +186,6 @@
 		56D44CC51F981AED00459D39 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				4AC0F0AD8191AE5804A2F561 /* Pods_PagoEfectivoSDKSample.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -217,14 +211,6 @@
 			name = SearchCip;
 			sourceTree = "<group>";
 		};
-		7BF712E568BA24BBC5A13BB2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4BAC0624674B1974E596858B /* Pods_PagoEfectivoSDKSample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,13 +218,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5681E0B01F881F1D00D48860 /* Build configuration list for PBXNativeTarget "PagoEfectivoSDKSample" */;
 			buildPhases = (
-				5C33457E0995677BB1298D25 /* [CP] Check Pods Manifest.lock */,
+				0B5D569DE1CB1A54C4363C53 /* [CP] Check Pods Manifest.lock */,
 				5681E09A1F881F1D00D48860 /* Sources */,
 				5681E09B1F881F1D00D48860 /* Frameworks */,
 				5681E09C1F881F1D00D48860 /* Resources */,
-				7F18808F598E4E991E9B4459 /* [CP] Embed Pods Frameworks */,
-				845B4E9000DF1477B1F9124C /* [CP] Copy Pods Resources */,
 				56D44CC91F981BA000459D39 /* Embed Frameworks */,
+				3F1011AF098FA93C15ECD303 /* [CP] Embed Pods Frameworks */,
+				BF0F4B3C4C694F221B40CC64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,7 +286,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C33457E0995677BB1298D25 /* [CP] Check Pods Manifest.lock */ = {
+		0B5D569DE1CB1A54C4363C53 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,18 +304,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F18808F598E4E991E9B4459 /* [CP] Embed Pods Frameworks */ = {
+		3F1011AF098FA93C15ECD303 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample-frameworks.sh",
+				"${PODS_ROOT}/../../../Cocoa/Cocoa/PagoEfectivoSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagoEfectivoSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
@@ -338,9 +326,9 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		845B4E9000DF1477B1F9124C /* [CP] Copy Pods Resources */ = {
+		BF0F4B3C4C694F221B40CC64 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
@@ -494,7 +482,7 @@
 		};
 		5681E0B11F881F1D00D48860 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 605DD1341A1B3251640D4E23 /* Pods-PagoEfectivoSDKSample.debug.xcconfig */;
+			baseConfigurationReference = 184BCC05429C9CA98F5C7559 /* Pods-PagoEfectivoSDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -516,7 +504,7 @@
 		};
 		5681E0B21F881F1D00D48860 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5908BBFF74637ACD3996DF91 /* Pods-PagoEfectivoSDKSample.release.xcconfig */;
+			baseConfigurationReference = 94D6BCD294D30A4C0B58E48B /* Pods-PagoEfectivoSDKSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

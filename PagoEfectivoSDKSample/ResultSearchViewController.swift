@@ -14,10 +14,13 @@ class ResultSearchViewController: UIViewController {
     @IBOutlet weak var detailCipTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailCipTable.dataSource = self
-        detailCipTable.delegate = self
-        detailCipTable.register(UINib(nibName: Global.NibName.CipDetailTableViewCell, bundle: nil), forCellReuseIdentifier: Global.NibIdentifier.CipDetailTableViewCell)
-        print(resultSearch)
+        setupTable(table: detailCipTable)
+    }
+    
+    func setupTable (table : UITableView) {
+        table.dataSource = self
+        table.delegate = self
+        table.register(UINib(nibName: Global.NibName.CipDetailTableViewCell, bundle: nil), forCellReuseIdentifier: Global.NibIdentifier.CipDetailTableViewCell)
     }
 }
 

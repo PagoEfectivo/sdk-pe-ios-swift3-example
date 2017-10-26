@@ -13,7 +13,6 @@ class PaymentMethodTableViewController: UITableViewController {
     var dataCip = DataCip()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(dataCip)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,7 +30,7 @@ class PaymentMethodTableViewController: UITableViewController {
         case 1:
             performSegue(withIdentifier: Global.Segue.showAgentsOptions, sender: self)
         default:
-            print("Opción no válida")
+            self.present(Help.simpleAlert(message: "Opción no valida", time: 1.5), animated: true, completion: nil)
         }
     }
 

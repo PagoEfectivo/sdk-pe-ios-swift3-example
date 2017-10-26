@@ -36,17 +36,17 @@ class AgentsPaymentMethodTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == 1) {
+        if (indexPath.row == 1) {
             performSegue(withIdentifier: Global.Segue.showSummary, sender: self)
         } else {
-            print("Opción no váida!")
+            self.present(Help.simpleAlert(message: "Opción no valida", time: 1.5), animated: true, completion: nil)
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == Global.Segue.showSummary) {
             guard let nextView = segue.destination as? SummaryViewController else {
-                print("No se pudo cargar \(Global.Segue.showSummary)")
+                self.present(Help.simpleAlert(message: "No se pudo cargar \(Global.Segue.showSummary)", time: 1.5), animated: true, completion: nil)
                 return
             }
             nextView.dataCip = dataCip
