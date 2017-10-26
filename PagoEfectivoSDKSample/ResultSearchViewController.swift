@@ -51,10 +51,10 @@ extension ResultSearchViewController : UITableViewDataSource {
         cell.currencyCip.text = resultSearch[indexPath.row].currencyCip
         cell.statusCip.text = String(resultSearch[indexPath.row].statusCip)
         cell.statusNameCip.text = resultSearch[indexPath.row].statusNameCip
-        cell.dateCreationCip.text = Help.stringToDate(date: resultSearch[indexPath.row].dateCreationCip)
-        cell.dateExpiryCip.text = Help.stringToDate(date: resultSearch[indexPath.row].dateExpiryCip)
-        cell.datePaymentCip.text = Help.stringToDate(date: resultSearch[indexPath.row].datePaymentCip)
-        cell.dateRemovalCip.text = Help.stringToDate(date: resultSearch[indexPath.row].dateRemovalCip)
+        cell.dateCreationCip.text = Help.getFormatterEvent(dateString: resultSearch[indexPath.row].dateCreationCip)
+        cell.dateExpiryCip.text = Help.getFormatterEvent(dateString: resultSearch[indexPath.row].dateExpiryCip)
+        cell.datePaymentCip.text = Help.getFormatterEvent(dateString: resultSearch[indexPath.row].datePaymentCip)
+        cell.dateRemovalCip.text = Help.getFormatterEvent(dateString: resultSearch[indexPath.row].dateRemovalCip)
         return cell
     }
 }

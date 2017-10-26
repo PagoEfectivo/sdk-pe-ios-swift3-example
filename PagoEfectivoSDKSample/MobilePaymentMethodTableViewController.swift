@@ -21,16 +21,14 @@ class MobilePaymentMethodTableViewController: UITableViewController {
         if (dataCip.currencyCip == "PEN") {
             numberCip.text = "S/.\(String(dataCip.amountCip))"
         }
-        dateExpiryCip.text = Help.stringToDate(date: dataCip.dateExpiryCip)
+        dateExpiryCip.text = Help.getFormatterEvent(dateString: dataCip.dateExpiryCip)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return 6
     }
 
@@ -38,7 +36,7 @@ class MobilePaymentMethodTableViewController: UITableViewController {
         if (indexPath.row == 1) {
             performSegue(withIdentifier: Global.Segue.showSummary, sender: self)
         } else {
-            self.present(Help.simpleAlert(message: "Opción no valida", time: 1.5), animated: true, completion: nil)
+            self.present(Help.simpleAlert(message: "Opción no válida", time: 1.5), animated: true, completion: nil)
         }
     }
     

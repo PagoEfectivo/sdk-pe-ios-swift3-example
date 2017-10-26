@@ -89,14 +89,18 @@ struct Help {
         return alert
     }
 
-    static func stringToDate (date: String) -> String {
-        let year = date.substring(to: 4)
-        let month = date.substring(with: 5..<7)
-        let day = date.substring(with: 8..<10)
-        let hour = date.substring(with: 11..<13)
-        let min = date.substring(with: 14..<16)
-        let sec = date.substring(with: 17..<19)
-        return "\(day)/\(month)/\(year) \(hour):\(min):\(sec)"
+    static func getFormatterEvent(dateString:String)->String{
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return self.newFormatFor(dateFormater.date(from: dateString)!)
+        
+    }
+    
+    static func newFormatFor(_ date:Date) -> String {
+        let newDateFormat = DateFormatter()
+        newDateFormat.dateFormat = "dd/MM/yyyy hh:mm a"
+        newDateFormat.locale = Locale(identifier: "es_PE")
+        return newDateFormat.string(from: date)
     }
 
     static func createRefresh ( view: UIView) -> UIActivityIndicatorView {

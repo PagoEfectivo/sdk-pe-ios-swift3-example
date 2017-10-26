@@ -65,7 +65,6 @@ class DataCipViewController: UIViewController {
     }
     
     func changeDate () {
-    
         let myDateFormatter: DateFormatter = DateFormatter()
         myDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         dateExpiry.text = myDateFormatter.string(from: datePicker.date)
