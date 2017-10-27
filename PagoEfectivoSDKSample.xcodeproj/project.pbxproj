@@ -20,13 +20,15 @@
 		568935221F951012009D44E5 /* MobilePaymentMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568935211F951012009D44E5 /* MobilePaymentMethodTableViewController.swift */; };
 		568935241F95115C009D44E5 /* PaymentMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568935231F95115C009D44E5 /* PaymentMethodTableViewController.swift */; };
 		568935261F9516D3009D44E5 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568935251F9516D3009D44E5 /* SummaryViewController.swift */; };
+		56D4702D1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */; };
+		56D4702E1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */; };
+		56D4702F1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56E06BAA1F9544D90063380D /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BA91F9544D90063380D /* Help.swift */; };
 		56E06BAC1F9548A10063380D /* AgentsPaymentMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BAB1F9548A10063380D /* AgentsPaymentMethodTableViewController.swift */; };
 		56E06BB01F9650B40063380D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BAF1F9650B40063380D /* Extensions.swift */; };
 		56E06BB21F965EF00063380D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BB11F965EF00063380D /* Globals.swift */; };
 		56E1B72D1F916DF400821188 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E1B72C1F916DF400821188 /* CFNetwork.framework */; };
 		56E1B72F1F916DFE00821188 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E1B72E1F916DFE00821188 /* Security.framework */; };
-		9E6BE64AA82AB61030928D82 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8AE19A08111392BC026F05 /* Pods_PagoEfectivoSDKSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				56D4702F1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +63,7 @@
 		568935231F95115C009D44E5 /* PaymentMethodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodTableViewController.swift; sourceTree = "<group>"; };
 		568935251F9516D3009D44E5 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		56B8A7451F8FF3A60017515E /* PagoEfectivoSDKSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PagoEfectivoSDKSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PagoEfectivoSDK.framework; sourceTree = "<group>"; };
 		56E06BA91F9544D90063380D /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		56E06BAB1F9548A10063380D /* AgentsPaymentMethodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentsPaymentMethodTableViewController.swift; sourceTree = "<group>"; };
 		56E06BAF1F9650B40063380D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -76,8 +80,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E1B72F1F916DFE00821188 /* Security.framework in Frameworks */,
+				56D4702D1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework in Frameworks */,
 				56E1B72D1F916DF400821188 /* CFNetwork.framework in Frameworks */,
-				9E6BE64AA82AB61030928D82 /* Pods_PagoEfectivoSDKSample.framework in Frameworks */,
+				56D4702E1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 		03922B4AC287E5C5E8AE1E4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */,
 				56E1B72E1F916DFE00821188 /* Security.framework */,
 				56E1B72C1F916DF400821188 /* CFNetwork.framework */,
 				CE8AE19A08111392BC026F05 /* Pods_PagoEfectivoSDKSample.framework */,
@@ -311,14 +317,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PagoEfectivoSDKSample/Pods-PagoEfectivoSDKSample-frameworks.sh",
-				"${PODS_ROOT}/../../../Cocoa/Cocoa/PagoEfectivoSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagoEfectivoSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
