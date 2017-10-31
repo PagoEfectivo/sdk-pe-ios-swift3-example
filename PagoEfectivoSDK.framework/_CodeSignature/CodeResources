@@ -6,7 +6,7 @@
 	<dict>
 		<key>Debug.plist</key>
 		<data>
-		SKkB/8rjb5/7s+MSx88WJRCPsKs=
+		6G5y+cdJo4+arYHeATOwbdsxz+U=
 		</data>
 		<key>Headers/Auth.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/Helper.h</key>
 		<data>
-		rj4Wi0gzwpvmv6eMlyg7IiMZzgg=
+		R844zvnb+dkOz3tw3U6DzK18b6w=
 		</data>
 		<key>Headers/PagoEfectivoSDK.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		a2FhJYRtJ5k8ug59ZUs+xjYBa3c=
+		LZ5OmOTP3HW5rZr/ivlfQKcFVqM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Release.plist</key>
 		<data>
-		FrWjPi5t3QghUFv253MWd64FaR4=
+		7I/nyjWefH36HXSX3J8QkQqHA+8=
 		</data>
 		<key>ios-build-framework-script.sh</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>main.plist</key>
 		<data>
-		SKkB/8rjb5/7s+MSx88WJRCPsKs=
+		6G5y+cdJo4+arYHeATOwbdsxz+U=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -71,11 +71,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SKkB/8rjb5/7s+MSx88WJRCPsKs=
+			6G5y+cdJo4+arYHeATOwbdsxz+U=
 			</data>
 			<key>hash2</key>
 			<data>
-			y5uYTs+d01UZwAP/MgwCBJ+29N+HUWC0nsLD9E/WfzY=
+			PFZPXBPql5dno+5kumSs+aO1OOUwJ0qUd5vr7Mh8es8=
 			</data>
 		</dict>
 		<key>Headers/Auth.h</key>
@@ -148,11 +148,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rj4Wi0gzwpvmv6eMlyg7IiMZzgg=
+			R844zvnb+dkOz3tw3U6DzK18b6w=
 			</data>
 			<key>hash2</key>
 			<data>
-			CMP2mrhc6dAv/e7OUkG85gWuZ11ZKzPfoJzPSCxTquQ=
+			+eh8WzCVRWVdANhwH8nK0cT2UeTIpQpLkMsqwg/MAIY=
 			</data>
 		</dict>
 		<key>Headers/PagoEfectivoSDK.h</key>
@@ -181,11 +181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FrWjPi5t3QghUFv253MWd64FaR4=
+			7I/nyjWefH36HXSX3J8QkQqHA+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			mHl7PCGfk8ayUogUDTbRE7+4W9RpT3zDPqHpmE6P2Vc=
+			qYkdcDg3FL58foNOr2feNbarVFbekJbcr0oe1Yj8iRg=
 			</data>
 		</dict>
 		<key>ios-build-framework-script.sh</key>
@@ -214,11 +214,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SKkB/8rjb5/7s+MSx88WJRCPsKs=
+			6G5y+cdJo4+arYHeATOwbdsxz+U=
 			</data>
 			<key>hash2</key>
 			<data>
-			y5uYTs+d01UZwAP/MgwCBJ+29N+HUWC0nsLD9E/WfzY=
+			PFZPXBPql5dno+5kumSs+aO1OOUwJ0qUd5vr7Mh8es8=
 			</data>
 		</dict>
 	</dict>
