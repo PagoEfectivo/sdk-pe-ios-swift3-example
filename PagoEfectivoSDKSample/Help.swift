@@ -120,7 +120,7 @@ struct Help {
         }
         errorsFounded.enumerated().forEach({ (index, item) in
             let object = item as? [String: Any]
-            let messageForUser = "\(index+1). Campo \(object?["message"] as! String)"
+            let messageForUser = "\(index+1).\(object?["message"] as! String)"
             arrayErrorsForUser.append(messageForUser)
         })
         

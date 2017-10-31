@@ -16,10 +16,11 @@ class MobilePaymentMethodTableViewController: UITableViewController {
     var dataCip = DataCip()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        numberCip.text = "$ \(String(dataCip.amountCip))"
+        print(dataCip.numberCip)
+        numberCip.text = String(dataCip.numberCip)
+        mountCip.text = "$" + String(dataCip.amountCip)
         if (dataCip.currencyCip == "PEN") {
-            numberCip.text = "S/.\(String(dataCip.amountCip))"
+            mountCip.text = "S/.\(String(dataCip.amountCip))"
         }
         dateExpiryCip.text = Help.getFormatterEvent(dateString: dataCip.dateExpiryCip)
     }

@@ -18,10 +18,9 @@ class AgentsPaymentMethodTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         numberCip.text = String(dataCip.numberCip)
+        amountCip.text = "$ " + String(dataCip.amountCip)
         if (dataCip.currencyCip == "PEN") {
             amountCip.text = "S/. " + String(dataCip.amountCip)
-        } else {
-            amountCip.text = "$ " + String(dataCip.amountCip)
         }
         dateExpiryCip.text = Help.getFormatterEvent(dateString: dataCip.dateExpiryCip)
     }

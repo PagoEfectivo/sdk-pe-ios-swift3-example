@@ -31,8 +31,8 @@ class DataCipViewController: UIViewController {
     let request = CipRequest()
     let currencyPicker = UIPickerView()
     let documentTypePicker = UIPickerView()
-    let currencyOptions = ["PEN","USD"]
-    let documentTypeOptions = ["DNI","PASS","LMI","PAR","NAN"]
+    let currencyOptions = ["","PEN","USD"]
+    let documentTypeOptions = ["","DNI","PASS","LMI","PAR","NAN"]
     var dataCip = DataCip()
     let datePicker = UIDatePicker()
 

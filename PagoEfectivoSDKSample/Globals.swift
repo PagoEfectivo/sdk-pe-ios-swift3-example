@@ -16,6 +16,7 @@ struct Global {
         static let showAgentsOptions = "showAgentsOptions"
         static let showSummary = "showSummary"
         static let showResultSearch = "showResultSearch"
+        static let showMainView = "showMainView"
     }
     
     struct NibIdentifier {
