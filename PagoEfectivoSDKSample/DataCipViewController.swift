@@ -94,6 +94,8 @@ class DataCipViewController: UIViewController {
         request.userPhone = userPhone.text
         request.userCodeCountry = userCodeCountry.text
         request.adminEmail = adminEmail.text
+        print("dataExpiry->", request.dateExpiry);
+
         let response:serviceCallback = { (status, result, error) in
             if(error != nil ){
                 DispatchQueue.main.async{

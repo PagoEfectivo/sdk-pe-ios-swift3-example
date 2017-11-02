@@ -12,6 +12,9 @@
 		56579D4C1F883BA300FE85D6 /* CipDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56579D4A1F883BA300FE85D6 /* CipDetailTableViewCell.xib */; };
 		56579D4E1F883FD100FE85D6 /* ResultSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56579D4D1F883FD100FE85D6 /* ResultSearchViewController.swift */; };
 		5673F5A41F8FD92C005DD940 /* DataCipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673F5A31F8FD92C005DD940 /* DataCipViewController.swift */; };
+		5676E6001FAB5E9B00F58E5A /* PagoEfectivoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676E5FF1FAB5E9B00F58E5A /* PagoEfectivoSDK.framework */; };
+		5676E6011FAB5EA200F58E5A /* PagoEfectivoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676E5FF1FAB5E9B00F58E5A /* PagoEfectivoSDK.framework */; };
+		5676E6021FAB5EA200F58E5A /* PagoEfectivoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5676E5FF1FAB5E9B00F58E5A /* PagoEfectivoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5681E0A21F881F1D00D48860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5681E0A11F881F1D00D48860 /* AppDelegate.swift */; };
 		5681E0A71F881F1D00D48860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5681E0A51F881F1D00D48860 /* Main.storyboard */; };
 		5681E0A91F881F1D00D48860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5681E0A81F881F1D00D48860 /* Assets.xcassets */; };
@@ -21,9 +24,6 @@
 		568935241F95115C009D44E5 /* PaymentMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568935231F95115C009D44E5 /* PaymentMethodTableViewController.swift */; };
 		568935261F9516D3009D44E5 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568935251F9516D3009D44E5 /* SummaryViewController.swift */; };
 		56A6B1D21FA76E880018DC92 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6B1D11FA76E880018DC92 /* ConfigurationViewController.swift */; };
-		56D4702D1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */; };
-		56D4702E1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */; };
-		56D4702F1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56E06BAA1F9544D90063380D /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BA91F9544D90063380D /* Help.swift */; };
 		56E06BAC1F9548A10063380D /* AgentsPaymentMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BAB1F9548A10063380D /* AgentsPaymentMethodTableViewController.swift */; };
 		56E06BB01F9650B40063380D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E06BAF1F9650B40063380D /* Extensions.swift */; };
@@ -40,7 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				56D4702F1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Embed Frameworks */,
+				5676E6021FAB5EA200F58E5A /* PagoEfectivoSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +54,7 @@
 		56579D4A1F883BA300FE85D6 /* CipDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CipDetailTableViewCell.xib; sourceTree = "<group>"; };
 		56579D4D1F883FD100FE85D6 /* ResultSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultSearchViewController.swift; sourceTree = "<group>"; };
 		5673F5A31F8FD92C005DD940 /* DataCipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCipViewController.swift; sourceTree = "<group>"; };
+		5676E5FF1FAB5E9B00F58E5A /* PagoEfectivoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PagoEfectivoSDK.framework; sourceTree = "<group>"; };
 		5681E09E1F881F1D00D48860 /* PagoEfectivoSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagoEfectivoSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5681E0A11F881F1D00D48860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5681E0A61F881F1D00D48860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		568935251F9516D3009D44E5 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		56A6B1D11FA76E880018DC92 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		56B8A7451F8FF3A60017515E /* PagoEfectivoSDKSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PagoEfectivoSDKSample-Bridging-Header.h"; sourceTree = "<group>"; };
-		56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PagoEfectivoSDK.framework; sourceTree = "<group>"; };
 		56E06BA91F9544D90063380D /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		56E06BAB1F9548A10063380D /* AgentsPaymentMethodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentsPaymentMethodTableViewController.swift; sourceTree = "<group>"; };
 		56E06BAF1F9650B40063380D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -83,10 +83,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E1B72F1F916DFE00821188 /* Security.framework in Frameworks */,
-				56D4702D1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework in Frameworks */,
+				5676E6011FAB5EA200F58E5A /* PagoEfectivoSDK.framework in Frameworks */,
 				56E1B72D1F916DF400821188 /* CFNetwork.framework in Frameworks */,
-				56D4702E1FA3DA1500BFBDBE /* PagoEfectivoSDK.framework in Frameworks */,
 				611CB483961B3F7224A1FB7C /* Pods_PagoEfectivoSDKSample.framework in Frameworks */,
+				5676E6001FAB5E9B00F58E5A /* PagoEfectivoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 		03922B4AC287E5C5E8AE1E4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				56D4702C1FA3DA0F00BFBDBE /* PagoEfectivoSDK.framework */,
+				5676E5FF1FAB5E9B00F58E5A /* PagoEfectivoSDK.framework */,
 				56E1B72E1F916DFE00821188 /* Security.framework */,
 				56E1B72C1F916DF400821188 /* CFNetwork.framework */,
 				CE8AE19A08111392BC026F05 /* Pods_PagoEfectivoSDKSample.framework */,

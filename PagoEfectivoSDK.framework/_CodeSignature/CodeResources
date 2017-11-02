@@ -6,7 +6,7 @@
 	<dict>
 		<key>Debug.plist</key>
 		<data>
-		6G5y+cdJo4+arYHeATOwbdsxz+U=
+		SKkB/8rjb5/7s+MSx88WJRCPsKs=
 		</data>
 		<key>Headers/Auth.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LZ5OmOTP3HW5rZr/ivlfQKcFVqM=
+		a2FhJYRtJ5k8ug59ZUs+xjYBa3c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Release.plist</key>
 		<data>
-		7I/nyjWefH36HXSX3J8QkQqHA+8=
+		FrWjPi5t3QghUFv253MWd64FaR4=
 		</data>
 		<key>ios-build-framework-script.sh</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>main.plist</key>
 		<data>
-		6G5y+cdJo4+arYHeATOwbdsxz+U=
+		SKkB/8rjb5/7s+MSx88WJRCPsKs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -71,11 +71,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6G5y+cdJo4+arYHeATOwbdsxz+U=
+			SKkB/8rjb5/7s+MSx88WJRCPsKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PFZPXBPql5dno+5kumSs+aO1OOUwJ0qUd5vr7Mh8es8=
+			y5uYTs+d01UZwAP/MgwCBJ+29N+HUWC0nsLD9E/WfzY=
 			</data>
 		</dict>
 		<key>Headers/Auth.h</key>
@@ -181,11 +181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7I/nyjWefH36HXSX3J8QkQqHA+8=
+			FrWjPi5t3QghUFv253MWd64FaR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			qYkdcDg3FL58foNOr2feNbarVFbekJbcr0oe1Yj8iRg=
+			mHl7PCGfk8ayUogUDTbRE7+4W9RpT3zDPqHpmE6P2Vc=
 			</data>
 		</dict>
 		<key>ios-build-framework-script.sh</key>
@@ -214,11 +214,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6G5y+cdJo4+arYHeATOwbdsxz+U=
+			SKkB/8rjb5/7s+MSx88WJRCPsKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PFZPXBPql5dno+5kumSs+aO1OOUwJ0qUd5vr7Mh8es8=
+			y5uYTs+d01UZwAP/MgwCBJ+29N+HUWC0nsLD9E/WfzY=
 			</data>
 		</dict>
 	</dict>
